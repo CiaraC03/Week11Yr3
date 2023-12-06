@@ -12,14 +12,14 @@ import java.util.Map;
 
 public class UserController {
     private RegistrationServiceClient registrationServiceClient;
-    private UserDetails userDetails;
+
 
     //Injecting feign client interface
     @Autowired
-    public UserController(RegistrationServiceClient registrationServiceClient, UserDetails userDetails)
+    public UserController(RegistrationServiceClient registrationServiceClient)
     {
         this.registrationServiceClient = registrationServiceClient;
-        this.userDetails = userDetails;
+
     }
 
     @PostMapping("/confirm-and-register")
